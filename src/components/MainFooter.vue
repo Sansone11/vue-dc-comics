@@ -149,7 +149,6 @@ footer {
   ul {
     display: flex;
     gap: 2rem;
-    width: 200px;
   }
   h2{
     align-self: center;
@@ -164,6 +163,10 @@ footer {
   gap: 2rem;
   li{
     align-items: center;
+  }
+  img{
+    height: 30px;
+    width: 30px;
   }
 }
 </style>
