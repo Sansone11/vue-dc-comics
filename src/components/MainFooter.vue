@@ -1,13 +1,12 @@
 <template>
   <footer>
     <div class="contact">
-      <div>
-
-      </div>
       <div class="contact-wrapper">
-        <h3>DC COMICS</h3>
         <div>
           <ul>
+            <li>
+              <h3>DC COMICS</h3>
+            </li>
             <li><a href="#">Characters</a></li>
             <li><a href="#">Comics</a></li>
             <li><a href="#">Movies</a></li>
@@ -16,15 +15,19 @@
             <li><a href="#">Videos</a></li>
             <li><a href="#">News</a></li>
           </ul>
-          <h3>SHOP</h3>
           <ul>
+            <li>
+              <h3>SHOP</h3>
+            </li>
             <li><a href="#">Shop DC</a></li>
             <li><a href="#">Shop DC Collectibles</a></li>
           </ul>
         </div>
-        <h3>DC</h3>
         <div>
           <ul>
+            <li>
+              <h3>DC</h3>
+            </li>
             <li><a href="#">Term Of Use </a></li>
             <li><a href="#">Privacy policy (New)</a></li>
             <li><a href="#">Ad Choise</a></li>
@@ -38,9 +41,11 @@
             <li><a href="#">Contact Us</a></li>
           </ul>
         </div>
-        <h3>SITES</h3>
         <div>
           <ul>
+            <li>
+              <h3>SITES</h3>
+            </li>
             <li><a href="#">DC</a></li>
             <li><a href="#">MAD Magazine</a></li>
             <li><a href="#">DC Kids</a></li>
@@ -49,13 +54,16 @@
           </ul>
         </div>
       </div>
+      <div class="logo-footer">
+        <img src="../assets/img/dc-logo-bg.png" alt="">
+      </div>
     </div>
     <div class="follow-us">
       <div class="button">
-        <button id="push">SIGN-UP-NOW</button>
+        <button id="push">SIGN-UP-NOW !</button>
       </div>
       <div class="social-contact">
-        <h2>FOLLOW-US</h2>
+          <h2>FOLLOW-US</h2>
         <ul>
           <li class="icon"><img src="../assets/img/footer-facebook.png" alt=""></li>
           <li class="icon"><img src="../assets/img/footer-twitter.png" alt=""></li>
@@ -83,17 +91,16 @@ export default {
 footer {
   display: flex;
   flex-direction: column;
-  min-height: 200px;
   width: 100%;
 }
 
 .contact {
-  min-height: 350px;
   background-image: url(@/assets/img/footer-bg.jpg);
-  background-size: cover;
+  background-size:cover;
   background-position: center;
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   color: gray;
   flex-basis: 50%;
 
@@ -101,16 +108,33 @@ footer {
     color: white;
   }
 
+  a {
+    font-size: 10px;
+  }
+
+}
+
+#push{
+  border: solid 2px;
+  border-color: $bg-active;
+  background-color: $bg-footer-nav;
+  height: 30px;
+  font-size: 12px;
+  width: 120px;
+  color: white;
 }
 
 .contact-wrapper {
   display: flex;
-  // flex-direction: row;
-  justify-items:flex-end;
+  justify-items: center;
   align-content: center;
 
-  li &a {
-    font-size: 12px;
+  li {
+    gap: 1rem;
+  }
+  ul{
+    gap: 2rem;
+    margin-right: 20px;
   }
 }
 
@@ -119,7 +143,7 @@ footer {
   justify-content: space-around;
   align-items: center;
   background-color: $bg-footer-nav;
-  min-height: 100px;
+  min-height: 150px;
   flex-basis: 50%;
 
   ul {
@@ -127,11 +151,19 @@ footer {
     gap: 2rem;
     width: 200px;
   }
-
-  li {
-    height: 70px;
-    width: 70px;
-    border-radius: 50%;
+  h2{
+    align-self: center;
+    color:$bg-active;
+  }
+}
+.social-contact{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  li{
+    align-items: center;
   }
 }
 </style>

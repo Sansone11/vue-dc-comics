@@ -19,12 +19,12 @@ export default {
 <style scoped lang="scss">
    @import './Style/varaibles.scss';
   .container{
-    min-height: 100px;
+    height: 170px;
     background-color:$bg-main-content-bl;
 }
 
 .icons-bar{
-  min-height: 100px;
+  height: 170px;
   background-color:$bg-active;
 }
 </style>
