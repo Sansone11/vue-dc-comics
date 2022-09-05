@@ -21,5 +21,6 @@ export default {
 </script>
 
 <style lang="scss">
-  @import './components/Style/index.scss'
+  @import './components/Style/index.scss';
+  // @import '../assets/img';
 </style>

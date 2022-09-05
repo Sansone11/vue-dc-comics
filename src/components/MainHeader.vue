@@ -34,9 +34,17 @@ export default {
     header {
         max-width: 1250px;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
+        padding: 2rem, 0;
+        height: 100px;
     }
+
+    .logo-header{
+        max-height: 50px;
+        width: 50px;
+    }
+
 .nav{
     ul{
         display: flex;
