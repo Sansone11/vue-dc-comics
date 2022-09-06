@@ -1,34 +1,26 @@
 <template>
-  <main>
-    <div class="container">
-        <article class="card">
-            <img :src="thumb" :alt="serie">
-            <h2>{{serie}}</h2>
-        </article>
-    </div>
-  </main>
+    <article class="card">
+        <img :src="thumb" :alt="series">
+        <h2>{{ series }}</h2>
+    </article>
 </template>
 
 <script>
 
 export default {
-    props:{
+    props: {
         thumb: String,
-        serie: String,
+        series: String,
     },
- data(){
-    
- }
 }
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-    .card{
-        text-align: center;
-        h2{
-            color: white;
-        }
+.card {
+    text-align: center;
+
+    h2 {
+        color: white;
     }
-
-
+}
 </style>

@@ -2,8 +2,7 @@
   <main>
 
     <div class="container">
-     <ProductCard v-for ="(slides,i) in slides" :key="i"/>
-     <img :src="{{slides.thumb}}" :alt="serie">
+     <ProductCard v-for ="(slide,i) in slides" :key="i" :thumbs="slide.thumb" :series="slide.series" /> 
     </div>
 
     <div class="icons-bar">
