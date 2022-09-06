@@ -15,12 +15,11 @@ export default {
   components: {
     MainHeader: MainHeader,
     MainContent: MainContent,
-    MainFooter: MainFooter,
+    MainFooter: MainFooter,  
 }
 }
 </script>
 
 <style lang="scss">
   @import './components/Style/index.scss';
-  // @import '../assets/img';
 </style>

@@ -1,13 +1,11 @@
 <template>
   <main>
+
     <div class="container">
-      <div class="container-card">
-        <article class="card">
-          <img src="" alt="">
-          <h2></h2>
-        </article>
-      </div>
+     <ProductCard v-for ="(slides,i) in slides" :key="i"/>
+     <img :src="{{slides.thumb}}" :alt="serie">
     </div>
+
     <div class="icons-bar">
       <div class="icon-logo">
         <img src="../assets/img/buy-comics-digital-comics.png" alt="">
@@ -36,8 +34,8 @@
 
 <script>
 
-  @import ProductCard from './ProductCard.vue'
-const slide = [
+import ProductCard from './ProductCard.vue'
+const slides = [
   {
     thumb: "https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX",
     price: "$19.99",
@@ -112,14 +110,12 @@ const slide = [
   }
 ]
 export default {
-  data() {
-    props:{
-
-    }
-    return {
-      slide: slide,
-    }
-  }
+    data() {
+        return {
+            slides: slides,
+        };
+    },
+    components: { ProductCard }
 }
 </script>
 
@@ -128,7 +124,6 @@ export default {
 @import './Style/varaibles.scss';
 
 .container {
-  height: 170px;
   background-color: $bg-main-content-bl;
 
 }

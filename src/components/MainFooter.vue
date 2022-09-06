@@ -55,7 +55,7 @@
         </div>
       </div>
       <div class="logo-footer">
-        <img src="../assets/img/dc-logo-bg.png" alt="">
+        <!-- <img src="../assets/img/dc-logo-bg.png" alt=""> -->
       </div>
     </div>
     <div class="follow-us">
@@ -91,18 +91,21 @@ export default {
 footer {
   display: flex;
   flex-direction: column;
-  width: 100%;
-}
-
-.contact {
   background-image: url(@/assets/img/footer-bg.jpg);
   background-size:cover;
   background-position: center;
+}
+
+.contact {
   display: flex;
   justify-content: center;
   align-items: center;
   color: gray;
   flex-basis: 50%;
+  background-image: url(../assets/img/dc-logo-bg.png);
+  background-size: auto 130%;
+  background-position: center right;
+  background-repeat: no-repeat;
 
   h3 {
     color: white;
@@ -168,5 +171,9 @@ footer {
     height: 30px;
     width: 30px;
   }
+}
+
+.logo-footer{
+  flex-basis: 50%;
 }
 </style>
