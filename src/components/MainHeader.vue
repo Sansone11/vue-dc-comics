@@ -49,7 +49,7 @@ export default {
     ul{
         display: flex;
         align-items: center;
-        justify-content: end;
+        justify-content: flex-end;
         gap: 1rem;
 
         .nav_link{

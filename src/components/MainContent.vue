@@ -2,7 +2,7 @@
   <main>
 
     <div class="container">
-     <ProductCard v-for ="(slide,i) in slides" :key="i" :thumbs="slide.thumb" :series="slide.series" /> 
+     <ProductCard v-for ="(slide,i) in slides" :key="i" :thumb="slide.thumb" :series="slide.series" /> 
     </div>
 
     <div class="icons-bar">
@@ -124,7 +124,13 @@ export default {
 
 .container {
   background-color: $bg-main-content-bl;
-
+  display:grid;
+  grid-template-columns:repeat(6,1fr) ;
+  padding:50px 150px;
+  .card{
+    margin-bottom: 20px;
+    margin-left: 20px;
+  }
 }
 
 .icons-bar {

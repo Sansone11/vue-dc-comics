@@ -18,7 +18,6 @@ export default {
 <style scoped lang="scss">
 .card {
     text-align: center;
-
     h2 {
         color: white;
     }
