@@ -103,9 +103,11 @@ footer {
   color: gray;
   flex-basis: 50%;
   background-image: url(../assets/img/dc-logo-bg.png);
-  background-size: auto 130%;
-  background-position: center right;
+  background-size:auto 130%;
+  background-position:center right;
   background-repeat: no-repeat;
+  padding-top: 40px;
+  margin-bottom: 40px;
 
   h3 {
     color: white;
@@ -146,7 +148,7 @@ footer {
   justify-content: space-around;
   align-items: center;
   background-color: $bg-footer-nav;
-  min-height: 150px;
+  min-height: 100px;
   flex-basis: 50%;
 
   ul {

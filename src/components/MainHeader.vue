@@ -6,16 +6,9 @@
     <div>
         <nav class="nav">
             <ul>
-                <li class="nav_link"> <a href="#">CHARACTERS</a></li>
-                <li class="nav_link"> <a href="#">COMICS</a></li>
-                <li class="nav_link"> <a href="#">MOVIE</a></li>
-                <li class="nav_link"> <a href="#">TV</a></li>
-                <li class="nav_link"> <a href="#">GAMES</a></li>
-                <li class="nav_link"> <a href="#">COLLECTIBLES</a></li>
-                <li class="nav_link"> <a href="#">VIDEOS</a></li>
-                <li class="nav_link"> <a href="#">FANS</a></li>
-                <li class="nav_link"> <a href="#">NEWS</a></li>
-                <li class="nav_link"> <a href="#">SHOP</a></li>
+                <li class="nav_link" v-for="(link,index) in links" :key="index" :class="[ link.current ? 'active': '' ,nav_link]"> <a :href="link.href">
+
+                {{link.text}}</a></li>
             </ul>
         </nav>
     </div>
@@ -23,8 +16,56 @@
 </template>
 
 <script>
+
+    const links=[
+        {
+            text:'CHARACTERS',
+            href:'#',
+        },
+        {
+            text:'COMICS',
+            href:'#',
+        },
+        {
+            text:'MOVIE',
+            href:'#',
+        },
+        {
+            text:'TV',
+            href:'#',
+        },
+        {
+            text:'GAMES',
+            href:'#',
+        },
+        {
+            text:'COLLECTIBLES',
+            href:'#',
+        },
+        {
+            text:'VIDEOS',
+            href:'#',
+        },
+        {
+            text:'FANS',
+            href:'#',
+        },
+        {
+            text:'NEWS',
+            href:'#',
+        },
+        {
+            text:'SHOP',
+            href:'#',
+        },
+        
+    ]
 export default {
- 
+   data() {
+    return{
+        links:links,
+    }
+   }
 }
 </script>
 
@@ -45,11 +86,18 @@ export default {
         width: 50px;
     }
 
+    .active{
+        background-color: $bg-active;
+                color: white;
+    }
+
 .nav{
+    display: inline-block;
+    margin-right: auto;
     ul{
+        max-width: 200px;
         display: flex;
         align-items: center;
-        justify-content: flex-end;
         gap: 1rem;
 
         .nav_link{
