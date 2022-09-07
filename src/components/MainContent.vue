@@ -2,7 +2,9 @@
   <main>
 
     <div class="container">
+      <button class="current-button">CURRENT SEREIES</button>
      <ProductCard v-for ="(slide,i) in slides" :key="i" :thumb="slide.thumb" :series="slide.series" /> 
+     <button class="load-button">LOAD MORE</button>
     </div>
 
     <div class="icons-bar">
@@ -127,9 +129,33 @@ export default {
   display:grid;
   grid-template-columns:repeat(6,1fr) ;
   padding:50px 150px;
+  position: relative;
+  margin:0 auto;
   .card{
     margin-bottom: 20px;
     margin-left: 20px;
+  }
+  .current-button{
+    position: absolute;
+    top: -20px;
+    left:150px;
+    height: 40px;
+    width: 200px;
+    background-color:$bg-active;
+    color: white;
+    border: none;
+
+  }
+  .load-button{
+    height: 30px;
+    width: 150px;
+    background-color:$bg-active;
+    color: white;
+    border: none;
+    position: absolute;
+    bottom: 20px;
+    right: 50%;
+    
   }
 }
 
